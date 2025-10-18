@@ -9,8 +9,7 @@
 
 ---
 
-![nmap-ten](/home/kali/Pictures/nmap-ten.png)
-
+<img width="869" height="240" alt="nmap" src="https://github.com/user-attachments/assets/74d48176-1bce-49e7-a0cc-f291a2adc53a" />
 
 ---
 
@@ -40,8 +39,7 @@ Sounds cool? It does - we allow old-school static HTML pages ONLY. Also we can't
 Anonymous FTP  not allowed. Hmmmm?
 
 
-![ftp-fail](/home/kali/Pictures/ftp-fail.png)
-
+<img width="714" height="269" alt="ftp-fail" src="https://github.com/user-attachments/assets/26a55801-b3a3-47e2-8833-362755d5e663" />
 
 ---
 
@@ -51,7 +49,7 @@ Looks like we need to sign up and see what we get.
 http://ten.htb/signup.php
 
 
-![sign-up](/home/kali/Pictures/sign-up.png)
+<img width="1313" height="652" alt="sign-up" src="https://github.com/user-attachments/assets/42def6b9-418f-45e8-a619-e38a8d503b20" />
 
 ---
 
@@ -59,7 +57,7 @@ http://ten.htb/signup.php
 If we enter something into the 'Domain Name:' box and press 'Request credentials', the box seems to hang for a bit and then returns:
 
 
-![express-checkout](/home/kali/Pictures/express-checkout.png)
+<img width="1226" height="627" alt="express-checkout" src="https://github.com/user-attachments/assets/30290cd8-1b1f-4c27-9aa5-f36ceb9f406f" />
 
 
 
@@ -81,7 +79,7 @@ Now, we can access upload 'your pages' via ftp://ten.vl
 Run dirbuster:
 
 
-![dirsearch](/home/kali/Pictures/dirsearch.png)
+<img width="857" height="730" alt="dirsearch" src="https://github.com/user-attachments/assets/6782dd68-a206-43d3-a8e9-2949683ca787" />
 
 
 ---
@@ -90,7 +88,7 @@ Run dirbuster:
 http://ten.vl/info.php
 
 
-![info-php](/home/kali/Pictures/info-php.png)
+<img width="978" height="877" alt="info-php" src="https://github.com/user-attachments/assets/21e0212f-781b-4a5a-9635-d033bbfd4778" />
 
 
 ---
@@ -106,13 +104,14 @@ ftp ten-0311fd0e@quill.ten.vl
 
 password: 		e88440db
 
-![ftp-as-ten](/home/kali/Pictures/ftp-as-ten.png)
+
+<img width="727" height="249" alt="ftp-as-ten" src="https://github.com/user-attachments/assets/616204b7-3b0b-4522-a7c5-74844c7d9e53" />
 
 
 If we visit our own webpage before running this ftp command, we get nothing, but NOW we get:
 
 
-![quill-webpage](/home/kali/Pictures/quill-webpage.png)
+<img width="490" height="179" alt="quill-webpage" src="https://github.com/user-attachments/assets/ea05c9ad-e94f-47e5-ad07-29fb61fdd341" />
 
 
 ---
@@ -124,7 +123,7 @@ This clearly points towards a file upload that will then be visible on our newly
 Test by uploading a sample.txt file with some innocuous content:
 
 
-![upload-sample](/home/kali/Pictures/upload-sample.png)
+<img width="941" height="512" alt="upload-sample" src="https://github.com/user-attachments/assets/96208f09-c11e-4958-954c-588ee7719338" />
 
 
 Now check the website and see if our file is visible:
@@ -133,13 +132,15 @@ Now check the website and see if our file is visible:
 http://quill.ten.vl/sample.txt
 
 
-![sample-txt](/home/kali/Pictures/sample-txt.png)
+<img width="620" height="111" alt="sample-txt" src="https://github.com/user-attachments/assets/89fd9a70-ea5a-48b7-bd1f-cb646b16b09c" />
 
 
 However, if we upload a php file nothing happens:
 
 
-![sample-php](/home/kali/Pictures/sample-php.png)
+
+<img width="623" height="110" alt="sample-php" src="https://github.com/user-attachments/assets/750ca810-6952-44bf-9251-db4947ac3aa3" />
+
 
 
 ---
@@ -148,7 +149,7 @@ However, if we upload a php file nothing happens:
 We are kinda stuck so it's time for more enumeration. Let's try to find subdomains
 
 
-![subdomains](/home/kali/Pictures/subdomains.png)
+<img width="938" height="532" alt="subdomains" src="https://github.com/user-attachments/assets/f03897dd-ec86-4896-b769-bd21ff7e7f6f" />
 
 
 Add  webdb.ten.vl  to  /etc/hosts
@@ -160,16 +161,13 @@ Add  webdb.ten.vl  to  /etc/hosts
 Visit the site and we get an interesting MySQLdb website:
 
 
-![webdb](/home/kali/Pictures/webdb.png)
-
+<img width="1912" height="385" alt="webdb" src="https://github.com/user-attachments/assets/b925665d-2c59-4dfb-9ea6-7d3df2af59c8" />
 
 
 WE don't have credentials but if we push 'Guess Credentials' it prints  "Credentials found: user | pa55w0rd"  and we get this new page:
 
 
-
-![after-guessed-creds](/home/kali/Pictures/after-guessed-creds.png)
-
+<img width="1900" height="411" alt="after-guessed-creds" src="https://github.com/user-attachments/assets/8d1f711d-4f54-4169-8fd8-91acb999dd27" />
 
 
 ---
@@ -178,8 +176,7 @@ WE don't have credentials but if we push 'Guess Credentials' it prints  "Credent
 If we click on the 'pureftpd' button, we get a readout of our user's information:
 
 
-
-![pureftpd-our-creds](/home/kali/Pictures/pureftpd-our-creds.png)
+<img width="1915" height="245" alt="pureftpd-our-creds" src="https://github.com/user-attachments/assets/2234b7b6-0d66-4603-ab49-fb7bfa850858" />
 
 
 ---
@@ -188,7 +185,7 @@ If we click on the 'pureftpd' button, we get a readout of our user's information
 If we "select" our test user (by clicking the box at the rightmost edge), we can then click the "pencil" and edit the values in the database:
 
 
-![update-data](/home/kali/Pictures/update-data.png)
+<img width="1914" height="727" alt="update-data" src="https://github.com/user-attachments/assets/c851c6e9-90f9-4091-91f5-0af5f552d64a" />
 
 
 The 'dir' value is most interesting. Given that this is an intentionally vulnerable box, we can maybe assume that there is an LFI here?
@@ -208,7 +205,7 @@ That worked!!!
 However, we get an interesting error from the ftp server:
 
 
-![ftp-fail](/home/kali/Pictures/ftp-fail.png)
+<img width="714" height="269" alt="ftp-fail" src="https://github.com/user-attachments/assets/a6610a61-431f-43ac-a26c-707e26cdcb5b" />
 
 
 What does 'Home directory not available' mean?  We must be blocked from going deep into the file structure. What if we just go up one directory to what should be the /home directory above /srv?
@@ -221,7 +218,7 @@ It accepts just  '/srv/../'
 Now, check ftp again and,... AHA!
 
 
-![base-ftp](/home/kali/Pictures/base-ftp.png)
+<img width="855" height="807" alt="base-ftp" src="https://github.com/user-attachments/assets/bcc778a0-6b40-4ac8-ab96-604e63364d9d" />
 
 
 ---
@@ -230,13 +227,13 @@ Now, check ftp again and,... AHA!
 We can navigate inside the ftp server and grab the passwd file from /etc:
 
 
-![get-passwd](/home/kali/Pictures/get-passwd.png)
+<img width="952" height="264" alt="get-passwd" src="https://github.com/user-attachments/assets/960230d0-495f-4de6-b168-7c02db410062" />
 
 
 We can't grab shadow, or move into other imortant directories, so let's look at passwd:
 
 
-![passwd](/home/kali/Pictures/passwd.png)
+<img width="866" height="697" alt="passwd" src="https://github.com/user-attachments/assets/05a7b402-6d67-4536-8997-21381573b7dd" />
 
 
 password: 		e88440db
@@ -258,9 +255,7 @@ So, let's try tyrell's UID:GID of 1000:1000
 Now, we can get into folders that are owned by user 'tyrell'
 
 
-
-![tyrell-dir](/home/kali/Pictures/tyrell-dir.png)
-
+<img width="923" height="296" alt="tyrell-dir" src="https://github.com/user-attachments/assets/defaa91e-af6c-423d-bdfa-f609f3f5832f" />
 
 
 WE can't grab the .user.txt file:
@@ -280,7 +275,7 @@ We CAN attempt to upload an  SSH key to the .ssh folder, no?
 We can't actually upload from the directory when we move into /srv/../home/tyrell   but what if we move into  /srv/../home/tyrell/.ssh ??
 
 
-![upload-key](/home/kali/Pictures/upload-key.png)
+<img width="948" height="260" alt="upload-key" src="https://github.com/user-attachments/assets/797d91b7-c059-4f39-aee7-c86de9d2370f" />
 
 
 Ooooh, it looks like it worked!?
@@ -292,11 +287,9 @@ Ooooh, it looks like it worked!?
 YES!!
 
 
-![user-txt](/home/kali/Pictures/user-txt.png)
+<img width="833" height="317" alt="user-txt" src="https://github.com/user-attachments/assets/379b1e56-96b9-43b5-8306-946e5601b41c" />
 
-
-
-**************************************************              a0a255ad63b7a26d83467fa6e0a6a757             *************************************************************
+*****************************              a0a255ad63b7a26d83467fa6e0a6a757             **********************************************
 
 
 ---
@@ -308,7 +301,7 @@ There isn't anything of interest in our directory and we can't access /root. I u
 Let's look around:
 
 
-![var-www-html](/home/kali/Pictures/var-www-html.png)
+<img width="930" height="254" alt="var-www-html" src="https://github.com/user-attachments/assets/9f98f9d6-3f4d-41da-9346-c515614fa088" />
 
 
 What is that 'get-credentials...' file?
@@ -375,7 +368,8 @@ Interestingly, this program goes on to call system with '/usr/bin/etcdctl'. We n
 
 I ran pspy64 just in case anything unusual was running in the background:
 
-![pspy64](/home/kali/Pictures/pspy64.png)
+
+<img width="942" height="263" alt="pspy64" src="https://github.com/user-attachments/assets/39b3e26f-372d-42ed-ba84-012074e52582" />
 
 
 AHA, what is that? /usr/local/sbin/remco
@@ -441,7 +435,7 @@ So, a VirtualHost (on PORT 80) is being generated for each key in the  /customer
 We can try to write a new key and put it in a specific, and distinct directory, so we can see what is going on:
 
 
-![new-virt](/home/kali/Pictures/new-virt.png)
+<img width="687" height="281" alt="new-virt" src="https://github.com/user-attachments/assets/c098d5a3-055d-4a60-aa86-7bb20704cd2d" />
 
 
 BOOM!!  We have a new VirtualHost with our  specified  'ServerName' and 'DocumentRoot'
@@ -456,15 +450,14 @@ Now, the trick here is to check to see if we can insert newlines into the config
 Use our legit user (ten-0311fd0e) to make sure that we can perform the privesc operation:
 
 
-![test](/home/kali/Pictures/test.png)
+<img width="869" height="83" alt="test" src="https://github.com/user-attachments/assets/b6f1c241-69b9-4517-9151-1b6a8ca1f7c0" />
 
 Ooooh, looks like it works!!
 
 
 BOOM!!
 
-
-![boom](/home/kali/Pictures/boom.png)
+<img width="914" height="282" alt="boom" src="https://github.com/user-attachments/assets/24405dd4-f4c2-4450-96c0-a1c186792414" />
 
 
 ---
@@ -503,13 +496,14 @@ ETCDCTL_API=3 etcdctl put /customers/ten-0311fd0e/url 'privesc.ten.vl
 CustomLog "|$cp /home/tyrell/.ssh/authorized_keys /root/.ssh/authorized_keys" common
 #'
 
-![privesc](/home/kali/Pictures/privesc.png)
+
+<img width="839" height="81" alt="privesc" src="https://github.com/user-attachments/assets/f4c5d560-974c-42ca-8846-d5ff9c91cf0c" />
 
 
 Now, ssh in as root with the ed25519 key we made previously
 
 
-![root-flag](/home/kali/Pictures/root-flag.png)
+<img width="911" height="271" alt="root-flag" src="https://github.com/user-attachments/assets/c9bcf1b6-db37-4d4d-9915-a11695336176" />
 
 
-*******************************************************          d89266bde1e8cfe1cd70194bd899d2e7         ******************************************************************
+**********************************          d89266bde1e8cfe1cd70194bd899d2e7        ************************************
