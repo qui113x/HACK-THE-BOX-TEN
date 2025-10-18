@@ -39,7 +39,8 @@ Sounds cool? It does - we allow old-school static HTML pages ONLY. Also we can't
 Anonymous FTP  not allowed. Hmmmm?
 
 
-<img width="714" height="269" alt="ftp-fail" src="https://github.com/user-attachments/assets/26a55801-b3a3-47e2-8833-362755d5e663" />
+<img width="771" height="252" alt="anonymous-fail" src="https://github.com/user-attachments/assets/1ab5456d-7fc3-4421-9ebf-877cb0d04458" />
+
 
 ---
 
